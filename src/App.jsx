@@ -56,7 +56,9 @@ export default function App() {
     <div className="wrapper">
       <div className="top">
         <div className="header">
-          <h1 style={{ fontSize: "3rem" }}>Welcome to Clock Converter</h1>
+          <h1 style={{ fontSize: "3rem" }}>
+            Welcome to Time Converter Project
+          </h1>
         </div>
         <div className="local-clock">
           <Clolck coutry={coutry} date={localDate} />
