@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: rgb(208, 211, 211);
+  font-family: "Montserrat", sans-serif;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 0.4fr 2.2fr 0.4fr;
+  grid-template-rows: 0.2fr 1.9fr 0.9fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ". . ."
+    ". wrapper ."
+    ". . .";
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.5fr 0.5fr 2fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  justify-content: center;
+  align-content: start;
+  justify-items: center;
+  align-items: start;
+  grid-template-areas:
+    "top top top"
+    "main main main"
+    "bottom bottom bottom";
+  grid-area: wrapper;
+}
+
+.top {
+  display: grid;
+  grid-template-columns: 0.4fr 2.4fr 0.2fr;
+  grid-template-rows: 1fr 0.1fr 2.2fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  align-items: end;
+  grid-template-areas:
+    ". header ."
+    ". . ."
+    ". local-clock .";
+  grid-area: top;
+}
+
+.header {
+  grid-area: header;
+}
+
+.local-clock {
+  grid-area: local-clock;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.8fr 1.4fr 0.8fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  align-items: center;
+  grid-template-areas:
+    ". . ."
+    "form form form"
+    ". . .";
+  grid-area: main;
+}
+
+.form {
+  grid-area: form;
+}
+
+.bottom {
+  display: grid;
+  grid-template-columns: 1.4fr 0.3fr 1.3fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  align-items: start;
+  grid-template-areas:
+    "from-clock d to-clock"
+    "from-clock . to-clock"
+    "from-clock . to-clock";
+  grid-area: bottom;
+}
+
+.from-clock {
+  grid-area: from-clock;
+}
+
+.to-clock {
+  grid-area: to-clock;
+}
+
+.d {
+  align-self: center;
+  grid-area: d;
+}
+
+div {
+  text-align: center;
+}
