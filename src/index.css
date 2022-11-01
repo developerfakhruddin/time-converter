@@ -24,6 +24,7 @@ body {
 
 .wrapper {
   display: grid;
+  height: 100vh;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 0.5fr 0.5fr 2fr;
   gap: 0px 0px;
